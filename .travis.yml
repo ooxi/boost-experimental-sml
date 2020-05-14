@@ -84,6 +84,21 @@ matrix:
 
   - os: linux
     dist: trusty
+    env: CXX=clang++-8 CXXSTD=c++17 LIBCXX=ON MEMCHECK=VALGRIND
+    addons: { apt: { packages: ["clang-8", "libstdc++-8-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-8"] } }
+
+  - os: linux
+    dist: trusty
+    env: CXX=clang++-9 CXXSTD=c++17 LIBCXX=ON MEMCHECK=VALGRIND
+    addons: { apt: { packages: ["clang-9", "libstdc++-9-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-9"] } }
+
+  - os: linux
+    dist: trusty
+    env: CXX=clang++-10 CXXSTD=c++17 LIBCXX=ON MEMCHECK=VALGRIND
+    addons: { apt: { packages: ["clang-10", "libstdc++-10-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-10"] } }
+
+  - os: linux
+    dist: trusty
     env: CXX=g++-5 MEMCHECK=VALGRIND
     addons: { apt: { packages: ["g++-5", "libstdc++-5-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test"] } }
 
@@ -106,6 +121,16 @@ matrix:
     dist: trusty
     env: CXX=g++-8 CXXSTD=c++1z MEMCHECK=VALGRIND
     addons: { apt: { packages: ["g++-8", "libstdc++-8-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test"] } }
+
+  - os: linux
+    dist: trusty
+    env: CXX=g++-9 CXXSTD=c++17 MEMCHECK=VALGRIND
+    addons: { apt: { packages: ["g++-9", "libstdc++-9-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test"] } }
+
+  - os: linux
+    dist: trusty
+    env: CXX=g++-10 CXXSTD=c++17 MEMCHECK=VALGRIND
+    addons: { apt: { packages: ["g++-10", "libstdc++-10-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test"] } }
 
   - os: osx
     osx_image: xcode7.3
