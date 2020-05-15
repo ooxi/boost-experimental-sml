@@ -88,14 +88,14 @@ matrix:
     addons: { apt: { packages: ["clang-8", "libstdc++-8-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-8"] } }
 
   - os: linux
-    dist: trusty
+    dist: bionic
     env: CXX=clang++-9 CXXSTD=c++17 LIBCXX=ON MEMCHECK=VALGRIND
-    addons: { apt: { packages: ["clang-9", "libstdc++-9-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-9"] } }
+    addons: { apt: { packages: ["clang-9", "libstdc++-9-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-bionic-9"] } }
 
   - os: linux
-    dist: trusty
+    dist: bionic
     env: CXX=clang++-10 CXXSTD=c++17 LIBCXX=ON MEMCHECK=VALGRIND
-    addons: { apt: { packages: ["clang-10", "libstdc++-10-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-trusty-10"] } }
+    addons: { apt: { packages: ["clang-10", "libstdc++-10-dev", "valgrind"], sources: ["ubuntu-toolchain-r-test", "llvm-toolchain-bionic-10"] } }
 
   - os: linux
     dist: trusty
